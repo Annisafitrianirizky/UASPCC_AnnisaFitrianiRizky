@@ -12,9 +12,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Build and tag docker image
         run: |
-          docker build -t ${{secrets.USERNAME}}/action-UASPCC_AnnisaFitrianiRizky:v1 -f dockerfile .
+          docker build -t ${{secrets.USERNAME}}/action-uaspcc_annisafitrianirizky:v1 -f dockerfile .
 
       - name: Push to Dockerhub
         run: |
             docker login -u ${{secrets.USERNAME}} -p ${{secrets.ACCESS_TOKEN}} &&
-            docker push ${{secrets.USERNAME}}/action-UASPCC_AnnisaFitrianiRizky:v1
+            docker push ${{secrets.USERNAME}}/action-uaspcc_annisafitrianirizky:v1
